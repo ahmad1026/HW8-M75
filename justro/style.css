@@ -13,14 +13,10 @@ body{
 }
 
 .navbar{
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-.navbar ul{
-    margin: 0;
-    padding: 0;
 }
 
 .navbar li{
@@ -30,8 +26,25 @@ body{
 }
 .logo{
     top: 0;
-    right: 100px;
+    right: 120px;
     position: absolute;
+    z-index: -1;
+}
+.camel-logo img{
+    top: 10px;
+    right: 120px;
+    width: 80px;
+    position: absolute;
+}
+.header-wave{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.navbar button{
+    margin-right: 60px;
 }
 
 .orang-btn{
@@ -42,4 +55,48 @@ body{
     outline: none;
     background-image: linear-gradient(to left, #e35325 , #ff8a65);
     border-radius: 20px;
+}
+.main{
+    width: 60%;
+}
+.section1{
+    position: relative;
+    margin-top:100px;
+}
+.section1 > .images{
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.section1 > .content{
+    width: 50%;
+}
+
+.section1 > .images > img{
+    width:500px ;
+    margin: 0;
+}
+.section1 > .content > h2{
+    color: #007f62;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.section1 > .content >hr{
+    background-color: #007f62;
+    margin: 0;
+    width: 35px;
+    height: 3px;
+    border-radius: 5px;
+}
+.slid-count{
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0;
+}
+.slid-count hr{
+    width: 10px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: grey;
 }
