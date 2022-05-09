@@ -90,10 +90,42 @@ body {
   background-color: grey;
   border-radius: 50%;
 }
-.section2 > .content{
+
+.section2 > .waves {
   position: relative;
+  z-index: -1;
 }
-.section2 > .content img{
+.section2 > .waves img {
   position: absolute;
   width: 100%;
+  z-index: -1;
+}
+.section2 > .content {
+  transform: translateY(300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.section2 > .content > .icons {
+  width: 110px;
+  height: 650px;
+  border: 1px solid grey;
+}
+
+.section2 > .content > .description {
+  width: 430px;
+  height: 220px;
+  border: 1px solid grey;
+}
+.section3{
+  margin-top: 300px;
+}
+.section3 > .content{
+  transform: translateY(-200px);
+  margin: auto;
+  width: 70%;
+  height: 300px;
+  border: 1px solid grey;
 }
