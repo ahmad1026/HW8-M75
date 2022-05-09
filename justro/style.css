@@ -1,106 +1,99 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.wrapper{
-    position: relative;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.navbar{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.navbar {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
-.navbar li{
-    list-style: none;
-    display: inline;
-    margin: 0px 15px;
+.navbar li {
+  list-style: none;
+  display: inline;
+  margin: 0px 15px;
 }
-.logo{
-    top: 0;
-    right: 120px;
-    position: absolute;
-    z-index: -1;
+.logo {
+  top: 0;
+  right: 120px;
+  position: absolute;
+  z-index: -1;
 }
-.camel-logo img{
-    top: 10px;
-    right: 120px;
-    width: 80px;
-    position: absolute;
+.camel-logo img {
+  top: 10px;
+  right: 120px;
+  width: 80px;
+  position: absolute;
 }
-.header-wave{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.navbar button{
-    margin-right: 60px;
+.header-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.orang-btn{
-    width: 120px;
-    height: 40px;
-    color: white;
-    border: none;
-    outline: none;
-    background-image: linear-gradient(to left, #e35325 , #ff8a65);
-    border-radius: 20px;
-}
-.main{
-    width: 60%;
-}
-.section1{
-    position: relative;
-    margin-top:100px;
-    height: 60vh;
-}
-.section1 > .images{
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-.section1 > .content{
-    width: 50%;
+.navbar button {
+  margin-right: 100px;
 }
 
-.section1 > .images > img{
-    width:500px ;
-    margin: 0;
+.orang-btn {
+  width: 120px;
+  height: 40px;
+  color: white;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to left, #e35325, #ff8a65);
+  border-radius: 20px;
 }
-.section1 > .content > h2{
-    color: #007f62;
-    margin: 0;
-    margin-bottom: 5px;
+
+.main {
+  width: 100%;
 }
-.section1 > .content >hr{
-    background-color: #007f62;
-    margin: 0;
-    width: 35px;
-    height: 3px;
-    border-radius: 5px;
+.section1 {
+  width: 60%;
+  margin: auto;
 }
-.slid-count{
-    bottom: 0;
-    left: 50%;
-    position: absolute;
+
+.section1 > .content {
+  display: flex;
+}
+
+.section1 > .content > .description hr {
+  background-color: #007f62;
+  margin: 0;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+}
+.slides img {
+  width: 500px;
+}
+.slid-count {
+  text-align: center;
 }
 .dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: grey;
+  border-radius: 50%;
+}
+.section2 > .content{
+  position: relative;
+}
+.section2 > .content img{
+  position: absolute;
+  width: 100%;
+}
