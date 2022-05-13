@@ -151,6 +151,11 @@ body {
   mask-repeat: no-repeat;
   transform: translateY(-150px);
 }
+.mask-1{
+  background-color: #007f62;
+  position: absolute;
+  
+}
 
 .section4 > .content {
   position: absolute;
@@ -203,4 +208,13 @@ body {
   margin: 10px;
   outline: none;
 
+}
+
+.footer{
+  width: 100%;
+}
+
+.footer > .wave{
+  width: 100%;
+  height: 100px;
 }
