@@ -40,3 +40,71 @@ user.Add("ahmad", "mohammadi", "654545", "student");
 user.Add("ahmad", "mohammadi", "654545", "student");
 user.Add("ahmad", "mohammadi", "654545", "student");
 user.Add("ahmad", "mohammadi", "654545", "student");
+
+
+const Student = {
+
+    set fullName(value){
+        this.fullName = value;
+    },
+    get fullName(){
+        return this.fullName;
+    },
+
+    set age(value){
+        this.age = value;
+    },
+    get age(){
+        return this.age;
+    },
+
+    set address(value){
+        this.address = value;
+    },
+    get address(){
+        return this.address;
+    },
+
+    set nationalId(value){
+        this.nationalId = value;
+    },
+    get nationalId(){
+        return this.nationalId;
+    },
+
+    set gender(value){
+        this.gender = value;
+    },
+    get gender(){
+        return this.gender;
+    },
+
+    set phoneNumber(value){
+        this.phoneNumber = value;
+    },
+    get phoneNumber(){
+        return this.phoneNumber;
+    },
+
+    set grade(value){
+        this.grade = value;
+    },
+    get grade(){
+        return this.grade;
+    },
+
+    set studyYear(value){
+        this.studyYear = value;
+    },
+    get studyYear(){
+        return this.studyYear;
+    }
+
+
+
+
+
+
+
+
+}
