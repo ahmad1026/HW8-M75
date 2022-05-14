@@ -10,8 +10,6 @@ let user = {
     nationalId: "",
     role: "",
     Add(firstName, family, nationalId, role) {
-        let newdatabase = localStorage.getItem('database');
-        console.log(newdatabase);
         this.firstName = firstName;
         this.family = family;
         this.nationalId = nationalId;
@@ -22,10 +20,15 @@ let user = {
             nationalId,
             role
         }
-        localStorage.setItem('database', database);
-    },
-    Remove() {
+        window.localStorage.setItem('database', JSON.stringify(database));
 
+    },
+    Remove(id, role) {
+        let newdatabase = JSON.parse(window.localStorage.getItem('database'));
+        delete newdatabase[role][id];
+        window.localStorage.setItem('database', JSON.stringify(newdatabase));
+        newdatabase = JSON.parse(window.localStorage.getItem('database'));
+        console.log(newdatabase);
     },
     Find() {
 
@@ -34,7 +37,6 @@ let user = {
 };
 
 user.Add("ahmad", "mohammadi", "654545", "student");
-// user.Add("ahmad", "mohammadi", "654545", "student");
-// user.Add("ahmad", "mohammadi", "654545", "student");
-// user.Add("ahmad", "mohammadi", "654545", "student");
-console.log(database);
+user.Add("ahmad", "mohammadi", "654545", "student");
+user.Add("ahmad", "mohammadi", "654545", "student");
+user.Add("ahmad", "mohammadi", "654545", "student");
