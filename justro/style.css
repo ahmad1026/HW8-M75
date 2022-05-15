@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .navbar {
@@ -18,6 +19,10 @@ body {
   flex-direction: row;
   align-items: center;
   margin-bottom: 100px;
+}
+.navbar h2 {
+  color: #007f62;
+  transform: translateX(-40px);
 }
 
 .navbar li {
@@ -84,6 +89,7 @@ body {
   text-align: center;
 }
 .dot {
+  background-color: grey;
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -96,9 +102,26 @@ body {
 }
 .section2 > .waves img {
   position: absolute;
+  left: 0;
   width: 100%;
   z-index: -1;
 }
+
+#wave-1 {
+  left: 0px;
+  animation-name: waves-1;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+#wave-2 {
+  animation-name: waves-2;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  overflow: hidden;
+}
+
 .section2 > .content {
   transform: translateY(300px);
   display: flex;
@@ -135,22 +158,41 @@ body {
   height: 100%;
   left: 50%;
   width: 3px;
-  background-image: radial-gradient(#007f62,white);;
+  background-image: radial-gradient(#007f62, white);
   z-index: -1;
 }
 
 .section2 > .content > .description {
   width: 430px;
   height: 220px;
-
 }
-.section2 > .content > .description h2{
+.section3 > .content > .description h2 {
   color: #007f62;
+}
+.section3 > .content > .input-box1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
+  width: 410px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid grey;
+  background-color: aliceblue;
+}
+
+.section3 > .content > .input-box1 input {
+  direction: ltr;
+  background-color: inherit;
+  width: 100%;
+  border: none;
+  margin: 10px;
+  outline: none;
 }
 .section3 {
   margin-top: 300px;
 }
 .section3 > .content {
+  text-align: center;
   box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.8);
   transform: translateY(-200px);
   margin: 0px auto;
@@ -242,4 +284,61 @@ body {
 .footer > .wave {
   width: 100%;
   height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar > .logo {
+    right: 0;
+  }
+  .main {
+    width: 100vw;
+  }
+  #header-wave,
+  #header-btn {
+    display: none;
+  }
+  .navbar ul {
+    display: none;
+  }
+  .slides img {
+    width: 300px;
+  }
+  .section1 > .content {
+    position: relative;
+    display: block;
+  }
+  .section2 > .content {
+    display: flex;
+    flex-direction: column;
+    /* overflow-x: hidden; */
+
+  }
+  .section2 > .content > .icons > .ver-hr {
+    display: none;
+  }
+  .section2 > .content > .icons{
+    overflow: scroll;
+    width: 100%;
+    transform: translateY(-600px);
+    position: absolute;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@keyframes waves-1 {
+  from {
+    left: 0;
+  }
+  to {
+    left: 500px;
+  }
+}
+@keyframes waves-2 {
+  from {
+    right: 0;
+  }
+  to {
+    right: 500px;
+  }
 }
