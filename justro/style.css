@@ -235,8 +235,7 @@ body {
   width: 300px;
 }
 .section4 > .content > .album img {
-    box-shadow: 0px 10px 20px rgba(64, 242, 255, 0.8);
-
+  /* box-shadow: 0px 10px 20px rgba(64, 242, 255, 0.8); */
 }
 .section4 > .content > .album > .after-image {
   padding: 20px;
@@ -254,8 +253,51 @@ body {
   background-color: rgba(80, 80, 80, 0.8);
   content: "تاریخی";
   font-size: large;
-  width: 300px; 
+  width: 300px;
   height: 50px;
+}
+.section4 > .content > .album > .after-image:hover::before {
+  position: absolute;
+  box-shadow: 0px 0px 20px rgba(64, 242, 255, 0.8);
+  color: white;
+  bottom: 23px;
+  left: 20px;
+  border-radius: 10px;
+  content: "";
+  width: 300px;
+  height: 80%;
+}
+
+.box-number {
+  display: flex;
+  justify-content: flex-end;
+  width: 410px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 50px auto 0px auto;
+  box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.8);
+}
+.box-number input {
+  margin-left: 20px;
+  outline: none;
+  border: none;
+  text-align: start;
+}
+.footer > .wave{
+  position: relative;
+}
+.footer > .content{
+  display: none;
+}
+#tweeter{
+  bottom: 150px;
+  left: 450px;
+  position: absolute;
+}
+#telegram{
+  bottom: 100px;
+  left: 370px;
+  position: absolute;
 }
 
 /****************************************/
@@ -328,7 +370,7 @@ body {
     transform: translateY(0px);
   }
 
-  .section4 > .content > .album > .after-image:hover::after {
+  /* .section4 > .content > .album > .after-image:hover::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -336,6 +378,39 @@ body {
     content: "slama";
     width: 50px;
     height: 50px;
+  } */
+  .get-number{
+    display: none;
+  }
+  .footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    background-color:aquamarine ;
+
+  }
+  .footer > .content input{
+    margin: auto auto 50px auto;
+    display: flex;
+    height: 50px;
+    width: 80%;
+    border-radius: 50px;
+    text-align: center;
+    font-size: large;
+    outline: none;
+    border: none;
+    flex-direction: column;
+  }
+  .footer > .content{
+    display: block;
+  }
+
+  .footer > .wave{
+    position: relative;
+  }
+  .footer > .wave img{
+    transform: scale(8);
+    margin-top: 300px;
   }
 }
 
