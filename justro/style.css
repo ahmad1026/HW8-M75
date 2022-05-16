@@ -201,6 +201,56 @@ body {
  padding: 0 10%;
 }
 
+.section4{
+  text-align: center;
+  transform: translateY(-250px);
+}
+.section4 > .content{
+  margin: auto;
+  
+}
+.section4 > .content p{
+  padding: 0px 10%;
+
+}
+.section4 h1{
+  color: #007f62;
+}.section4 > .content > .album img{
+  width: 100%;
+}
+.section4 > .content > .album > .img-wrapper{
+  width: 300px;
+}
+.section4 > .content > .album{
+  overflow-x: scroll;
+  margin: 40px 40px;
+  display: flex;
+  gap: 10px;
+}
+.section4 > .content > .album img{
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(80, 80, 80, 0.8);
+
+  width: 300px;
+}
+.section4 > .content > .album > .image{
+  height: 100px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(80, 80, 80, 0.8);
+}
+/* .section4 > .content img:hover::after{
+
+  cursor: pointer;
+} */
+.section4 > .content > .album img:hover{
+  content: 'salam';
+  cursor: pointer;
+ 
+
+}
+
+
 /****************************************/
 /*********************************/
 /*************************************/
@@ -266,6 +316,11 @@ body {
     mask-image: none;
     -webkit-mask-image: none;
   }
+  .section4{
+    text-align: center;
+    transform: translateY(0px);
+  }
+  
 }
 
 @keyframes waves-1 {
