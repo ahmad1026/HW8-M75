@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 18px;
 }
 
 .wrapper {
@@ -22,7 +23,7 @@ body {
 }
 .navbar h2 {
   color: #007f62;
-  transform: translateX(-40px);
+  transform: translateX(-50px);
 }
 
 .navbar li {
@@ -174,7 +175,19 @@ body {
   width: 100%;
   margin-top: 250px;
 }
-.section3 > .content {
+
+.section3 > .wrap-content > img{
+  margin-right: 50px;
+  
+}
+.section3 > .wrap-content > .content > .phone-responsive{
+  display: none;
+}
+.section3 > .wrap-content{
+  display: flex;
+  gap: 150px;
+  justify-content:flex-start;
+  text-align: center;
   transform: translateY(-300px);
   height: 300px;
   width: 80%;
@@ -355,6 +368,32 @@ body {
     transform: translateY(200px);
   }
   .section3 > img {
+    display: none;
+  }
+  .section3 > .wrap-content > img{
+    margin-right: 0px;
+    
+  }
+  .section3 > .wrap-content > .content > .phone-responsive{
+    display: block;
+  }
+  .section3 > .wrap-content{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* transform: translateY(-300px); */
+    height: 500px;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.8);
+    margin: auto;
+    border: 1px solid grey;
+  }
+  .section3 > .wrap-content > .content{
+    width: 80%;
+  }
+  .section3 > .wrap-content > .content > .box-number{
     display: none;
   }
   .section3 .already {
