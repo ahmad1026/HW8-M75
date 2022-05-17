@@ -5,23 +5,18 @@ let database = {
 }
 let user = {
     id: 0,
-    firstName: "",
-    family: "",
-    nationalId: "",
-    role: "",
-    Add(firstName, family, nationalId, role) {
-        this.firstName = firstName;
-        this.family = family;
-        this.nationalId = nationalId;
-        this.role = role;
-        database[role][++this.id] = {
-            firstName,
-            family,
-            nationalId,
-            role
+    Add(data, role) {
+        let user;
+        switch (role) {
+            case "student": user = new Student(data);
+                break;
+            case "teacher": user = new Teacher(data);
+                break;
+            case "manager": user = new Manager(data);
+                break;
         }
+        database[role][++this.id] = user;
         localStorage.setItem('database', JSON.stringify(database));
-
     },
     Remove(id, role) {
         let newdatabase = JSON.parse(localStorage.getItem('database'));
