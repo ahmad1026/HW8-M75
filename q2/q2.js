@@ -40,7 +40,7 @@ let user = {
 function Student(fullName, birthday, age, address, nationalId, gender, phoneNumber, grade, studyYear) {
     this._fullName = fullName;
     this._birthday = birthday;
-    this._age = age;
+    this._age = new Date().getFullYear() - this._birthday[0];
     this._address = address;
     this._nationalId = nationalId;
     this._gender = gender;
@@ -58,10 +58,14 @@ function Student(fullName, birthday, age, address, nationalId, gender, phoneNumb
     }),
         Object.defineProperty(this, "birthday", {
             set: function (value) {
-                this._birthday = value;
+                this._birthday[0] = value.getFullYear();/// yyyy
+                this._birthday[0] = value.getMounth() + 1;
+                this._birthday[0] = value.getDate();
+                this._age = new Date().getFullYear() - this._birthday[0];
+                localStorage.setItem("student", JSON.stringify(this));
             },
             get: function () {
-                return `${this.birthday}`;
+                return `${this.birthday[0]}/${this.birthday[1]}/${this.birthday[2]}`;
             }
         }),
         Object.defineProperty(this, "age", {
@@ -114,8 +118,10 @@ function Student(fullName, birthday, age, address, nationalId, gender, phoneNumb
         })
 }
 
-
-let student = new Student("ahmad mohammdi", "1991/05/05");
+if (!localStorage.getItem("student")) {
+    const student = new Student({});
+    localStorage.setItem("student", JSON.stringify(student));
+}
 
 
 
@@ -141,10 +147,14 @@ function Teacher(fullName, birthday, age, address, nationalId, gender, phoneNumb
     }),
         Object.defineProperty(this, "birthday", {
             set: function (value) {
-                this._birthday = value;
+                this._birthday[0] = value.getFullYear();/// yyyy
+                this._birthday[0] = value.getMounth() + 1;
+                this._birthday[0] = value.getDate();
+                this._age = new Date().getFullYear() - this._birthday[0];
+                localStorage.setItem("teacher", JSON.stringify(this));
             },
             get: function () {
-                return `${this.birthday}`;
+                return `${this.birthday[0]}/${this.birthday[1]}/${this.birthday[2]}`;
             }
         }),
         Object.defineProperty(this, "age", {
@@ -203,13 +213,17 @@ function Teacher(fullName, birthday, age, address, nationalId, gender, phoneNumb
                 return `${this.Salary}`;
             }
         })
+}
 
+if (!localStorage.getItem("teacher")) {
+    const teacher = new Teacher({});
+    localStorage.setItem("teacher", JSON.stringify(teacher));
 }
 
 
 
 
-function Manager(fullName, birthday, age, address, nationalId, gender, phoneNumber, Email, Salary ,major) {
+function Manager(fullName, birthday, age, address, nationalId, gender, phoneNumber, Email, Salary, major) {
     this._fullName = fullName;
     this._birthday = birthday;
     this._age = age;
@@ -231,10 +245,14 @@ function Manager(fullName, birthday, age, address, nationalId, gender, phoneNumb
     }),
         Object.defineProperty(this, "birthday", {
             set: function (value) {
-                this._birthday = value;
+                this._birthday[0] = value.getFullYear();/// yyyy
+                this._birthday[0] = value.getMounth() + 1;
+                this._birthday[0] = value.getDate();
+                this._age = new Date().getFullYear() - this._birthday[0];
+                localStorage.setItem("manager", JSON.stringify(this));
             },
             get: function () {
-                return `${this.birthday}`;
+                return `${this.birthday[0]}/${this.birthday[1]}/${this.birthday[2]}`;
             }
         }),
         Object.defineProperty(this, "age", {
@@ -294,4 +312,10 @@ function Manager(fullName, birthday, age, address, nationalId, gender, phoneNumb
             }
         })
 
+}
+
+if (!localStorage.getItem("manager")) {
+    const manager = new Manager({});
+
+    localStorage.setItem("manager", JSON.stringify(manager));
 }
