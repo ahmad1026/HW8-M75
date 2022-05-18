@@ -15,8 +15,8 @@ let user = {
             case "manager": user = new Manager(data);
                 break;
         }
-        database[role][++this.id] = user;
-        localStorage.setItem('database', JSON.stringify(database));
+        // database[role][++this.id] = user;
+        // localStorage.setItem('database', JSON.stringify(database));
     },
     Remove(id, role) {
         let newdatabase = JSON.parse(localStorage.getItem('database'));
@@ -31,11 +31,10 @@ let user = {
 
 };
 
-
-function Student(fullName, birthday, age, address, nationalId, gender, phoneNumber, grade, studyYear) {
+function Student({fullName, birthday, age, address, nationalId, gender, phoneNumber, grade, studyYear}) {
     this._fullName = fullName;
-    this._birthday = birthday;
-    this._age = new Date().getFullYear() - this._birthday[0];
+    this._birthday = birthday || [];
+    this._age = new Date().getFullYear() - this._birthday[0] || age;
     this._address = address;
     this._nationalId = nationalId;
     this._gender = gender;
